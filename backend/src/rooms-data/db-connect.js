@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const DEFAULT_CONNECTION_STRING = 'mongodb://localhost:27017/creamcat';
+const DEFAULT_CONNECTION_STRING = 'mongodb://mongo:-6b23fd1-FeB5eebG-G3cH5hEAHg543D@monorail.proxy.rlwy.net:17321/creamcat';
 
 // Connect to mongoDB with the connection string given as argument
 export default function connectToDatabase(connectionString = DEFAULT_CONNECTION_STRING) {
