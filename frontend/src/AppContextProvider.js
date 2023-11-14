@@ -23,7 +23,7 @@ function AppContextProvider({ children }) {
     //Create room function
     async function createRoom(room) {
         const response = await axios.post(
-            "http://localhost:3000/api/room/create/",
+            "creamcat-production.up.railway.app/api/room/create/",
             room
         );
         localStorage.setItem("currentRoom", JSON.stringify(response.data));
@@ -33,7 +33,7 @@ function AppContextProvider({ children }) {
     //Join room function
     async function joinRoom(room) {
         const response = await axios.post(
-            "http://localhost:3000/api/room/join/",
+            "creamcat-production.up.railway.app/api/room/join/",
             room
         );
         if (response.data.name) {

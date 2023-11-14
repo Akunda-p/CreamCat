@@ -28,7 +28,7 @@ export default function Room() {
             history.replace(`/RoomPage`);
         } else {
             // Connect to socket on localhost server and pass roomId
-            const socket = io({
+            const socket = io("creamcat-production.up.railway.app",{
                 query: {
                     roomID: currentRoom._id,
                     password: currentRoom.password,

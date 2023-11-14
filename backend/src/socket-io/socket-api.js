@@ -4,7 +4,11 @@ import { deleteSong } from "../rooms-data/songs-dao";
 import dayjs from "dayjs";
 
 export default function createSocketIoConnection(server) {
-    const io = socketIo(server);
+    const io = require("socket.io")(server, {
+        cors: {
+            origin: "*",
+        }
+      })
 
     // Listen to connection events on socket
     io.on("connection", (socket) => onConnection(socket));
