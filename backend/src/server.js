@@ -15,7 +15,7 @@ import routes from "./routes";
 app.use("/", routes);
 
 // Make the "public" folder available statically
-app.use(express.static(path.join(__dirname, "../../frontend/public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Delete expired rooms from database
 async function clearStaleRoom() {
@@ -31,18 +31,18 @@ async function clearStaleRoom() {
 // Check and delete expired rooms every minute
 setInterval(clearStaleRoom, 60000);
 
-// When running in production mode
-if (process.env.NODE_ENV === "production") {
-    console.log("Running in production!");
+// // When running in production mode
+// if (process.env.NODE_ENV === "production") {
+//     console.log("Running in production!");
 
-    // Make build folder public
-    app.use(express.static(path.join(__dirname, "../../frontend/build")));
+//     // Make build folder public
+//     app.use(express.static(path.join(__dirname, "../../frontend/build")));
 
-    // Serve up index.html by default
-    app.get("*", (req, res) => {
-        res.sendFile(path.join(__dirname, "../../frontend/build/index.html"));
-    });
-}
+//     // Serve up index.html by default
+//     app.get("*", (req, res) => {
+//         res.sendFile(path.join(__dirname, "../../frontend/build/index.html"));
+//     });
+// }
 
 // Setup socket.io server
 import http from "http";
