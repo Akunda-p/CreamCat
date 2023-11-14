@@ -18,7 +18,7 @@ function App() {
         const localStorageCurrentRoom = JSON.parse(localStorage.getItem("currentRoom"));
         if (localStorageCurrentRoom) {
             const response = await axios.post(
-                "creamcat-production.up.railway.app/api/room/join/",
+                "https://creamcat-production.up.railway.app/api/room/join/",
                 localStorageCurrentRoom
             );
             if (!response.data.name) {

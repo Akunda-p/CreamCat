@@ -26,7 +26,7 @@ export default function Playlist() {
 
         async function fetchData() {
             await axios
-                .post("creamcat-production.up.railway.app/api/playlist/getall/", room)
+                .post("https://creamcat-production.up.railway.app/api/playlist/getall/", room)
                 .then((response) => {
                     if (response.data.length > 0) {
                         const songs = response.data;

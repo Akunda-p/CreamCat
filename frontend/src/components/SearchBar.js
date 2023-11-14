@@ -31,7 +31,7 @@ export default function SearchBar() {
             content: "https://www.youtube.com/watch?v=" + searchResults[index].id.videoId
         }
         setAddedSongTitle((songToAdd.title));
-        axios.post('creamcat-production.up.railway.app/api/Playlist/add/', songToAdd)
+        axios.post('https://creamcat-production.up.railway.app/api/Playlist/add/', songToAdd)
     };
 
     //handles input into the form
