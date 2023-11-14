@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
+    "cors": "^2.8.5",
     "dayjs": "^1.10.4",
     "dummy-json": "^3.0.1",
     "esm": "^3.2.25",
@@ -35,5 +36,4 @@
     "mongodb-memory-server": "^6.9.6",
     "nodemon": "^2.0.7"
   }
-
 }

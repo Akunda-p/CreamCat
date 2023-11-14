@@ -2,10 +2,13 @@ import express from "express";
 import connectToDatabase from "./rooms-data/db-connect";
 import path from "path";
 import dayjs from "dayjs";
+const cors = require('cors');
 
 // Setup Express server
 const app = express();
 const port = process.env.PORT || 3001;
+
+app.use(cors())
 
 // Setup body-parser
 app.use(express.json());
